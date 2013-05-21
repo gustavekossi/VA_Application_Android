@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">VA_Application_Android</string>
+    <string name="app_name">ProjetM1_Prod</string>
     <string name="action_settings">Settings</string>
-    <string name="hello_world">Hello world!</string>
+    <string name="bgche">gauche</string>
+    <string name="bmilieu">Menu</string>
+    <string name="bdroit">droit</string>
 
 </resources>
