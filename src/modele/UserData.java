@@ -19,7 +19,7 @@ public class UserData {
 
 	public static UserData shared_instance() {
 		if(var_instance == null){
-			var_instance = new UserData(); 
+			var_instance = new UserData();  
 		}
 		return var_instance;
 	}
