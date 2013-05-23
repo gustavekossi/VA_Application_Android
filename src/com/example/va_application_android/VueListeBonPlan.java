@@ -9,13 +9,13 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-public class ListeBonPlan extends ListActivity{
+public class VueListeBonPlan extends ListActivity{
 
 	String[] lesBonPlans={"BonPlan1","bonplan2","bonplan3","bonplan4","bonplan5","bonplan6,bonplan7"};
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setListAdapter(new ArrayAdapter<String>(ListeBonPlan.this, android.R.layout.simple_list_item_1,lesBonPlans));
+		setListAdapter(new ArrayAdapter<String>(VueListeBonPlan.this, android.R.layout.simple_list_item_1,lesBonPlans));
 		
 	}
 	@Override
@@ -26,7 +26,7 @@ public class ListeBonPlan extends ListActivity{
 		String nomActivite = lesBonPlans[position];
 		try {
 			Class laClass = Class.forName("com.projetm1_test."+nomActivite);
-			Intent leIntent = new Intent(ListeBonPlan.this,laClass);
+			Intent leIntent = new Intent(VueListeBonPlan.this,laClass);
 			startActivity(leIntent);
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();

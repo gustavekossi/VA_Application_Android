@@ -43,12 +43,15 @@ public final class R {
         public static final int val=0x7f020001;
     }
     public static final class id {
-        public static final int action_settings=0x7f090005;
-        public static final int button1=0x7f090004;
-        public static final int buttonDrt=0x7f090003;
+        public static final int action_settings=0x7f090008;
+        public static final int btnInfo=0x7f090005;
+        public static final int btnQrCode=0x7f090002;
+        public static final int button1=0x7f090006;
+        public static final int buttonDrt=0x7f090004;
         public static final int buttonGche=0x7f090001;
-        public static final int buttonMilieu=0x7f090002;
+        public static final int buttonMilieu=0x7f090003;
         public static final int linearLayout1=0x7f090000;
+        public static final int var_blyt_info=0x7f090007;
     }
     public static final class layout {
         public static final int activity_menu=0x7f030000;
@@ -58,7 +61,8 @@ public final class R {
         public static final int vue_detaillee_actualite=0x7f030004;
         public static final int vue_detaillee_bonplan=0x7f030005;
         public static final int vue_detaillee_poiparticulier=0x7f030006;
-        public static final int vue_realite_augmentee=0x7f030007;
+        public static final int vue_info=0x7f030007;
+        public static final int vue_realite_augmentee=0x7f030008;
     }
     public static final class menu {
         public static final int menu=0x7f080000;
@@ -66,9 +70,10 @@ public final class R {
     public static final class string {
         public static final int action_settings=0x7f060001;
         public static final int app_name=0x7f060000;
-        public static final int bdroit=0x7f060004;
+        /**      <string name="bmilieu">Explorer</string> 
+         */
+        public static final int bdroit=0x7f060003;
         public static final int bgche=0x7f060002;
-        public static final int bmilieu=0x7f060003;
     }
     public static final class style {
         /** 
