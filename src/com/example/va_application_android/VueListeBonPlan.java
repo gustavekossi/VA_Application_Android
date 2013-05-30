@@ -1,5 +1,6 @@
 package com.example.va_application_android;
 
+import modele.UserData;
 import android.R.anim;
 import android.app.Activity;
 import android.app.ListActivity;
@@ -11,11 +12,26 @@ import android.widget.ListView;
 
 public class VueListeBonPlan extends ListActivity{
 
-	String[] lesBonPlans={"BonPlan1","bonplan2","bonplan3","bonplan4","bonplan5","bonplan6,bonplan7"};
+	String[] lesBonPlans; // {"BonPlan1","bonplan2","bonplan3","bonplan4","bonplan5","bonplan6,bonplan7"};
+	
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setListAdapter(new ArrayAdapter<String>(VueListeBonPlan.this, android.R.layout.simple_list_item_1,lesBonPlans));
+		
+		int var_nbElement = UserData.shared_instance().var_Array_BonPlan.size() ;
+		
+		System.out.print("taille = "+ var_nbElement);
+		
+		lesBonPlans = new String[  var_nbElement ]; 
+		
+		for ( int i = 0 ; i<var_nbElement ; i++ ){
+			
+			
+			lesBonPlans[i]  =  UserData.shared_instance().var_Array_BonPlan.elementAt(i).getVar_name() ; 
+		}
+		
+		setListAdapter(new ArrayAdapter<String>(VueListeBonPlan.this, android.R.layout.simple_list_item_1,  lesBonPlans));
 		
 	}
 	@Override

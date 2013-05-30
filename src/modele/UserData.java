@@ -4,9 +4,9 @@ import java.util.Vector;
 
 public class UserData {
 
-	private Vector<Poi> var_Array_Poi;
-	private Vector<Actualite> var_Array_Actu;
-	private Vector<BonPlan> var_Array_BonPlan;
+	public Vector<Poi> var_Array_Poi;
+	public Vector<Actualite> var_Array_Actu;
+	public Vector<BonPlan> var_Array_BonPlan;
 	
 	private static UserData var_instance = null;
 	
@@ -36,5 +36,11 @@ public class UserData {
 	}
 	public void generateContentBonPlan(){
 		var_Array_BonPlan.add(new BonPlan("reduction h&m", "le mercredi 20 mai", 7, 9));
+		var_Array_BonPlan.add(new BonPlan("1reduction h&m", "le mercredi 20 mai", 7, 9));
+		var_Array_BonPlan.add(new BonPlan("2reduction h&m", "le mercredi 20 mai", 7, 9));
+		var_Array_BonPlan.add(new BonPlan("3reduction h&m", "le mercredi 20 mai", 7, 9));
+		var_Array_BonPlan.add(new BonPlan("4reduction h&m", "le mercredi 20 mai", 7, 9));
+		var_Array_BonPlan.add(new BonPlan("5reduction h&m", "le mercredi 20 mai", 7, 9));
+		var_Array_BonPlan.add(new BonPlan("6reduction h&m", "le mercredi 20 mai", 7, 9));
 	}
 }

@@ -2,9 +2,11 @@ package com.example.va_application_android;
 
 import android.content.Intent;
 import android.util.Log;
-import android.view.Menu;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.Toast;
 
@@ -19,10 +21,16 @@ public class VueMenuActivity extends Activity {
 //   menu à l'écran
 	String[] tab_menu ={"Explorer","Bon Plan","A proximité","Actualités"};
 	
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);	
+		
 		setContentView(R.layout.activity_menu);
+		
+		
+		
+		
 		compteur = 0;
 		btnGche =(Button)findViewById(R.id.buttonGche);
 		btnMilieu =(Button)findViewById(R.id.buttonMilieu);
@@ -39,7 +47,7 @@ public class VueMenuActivity extends Activity {
 			
 				Log.d("bntTest", "msg :");
 				compteur-- ;
-				int value=compteur;
+				
 				
 				if(compteur < 0){
 					compteur =tab_menu.length-1;
@@ -106,5 +114,11 @@ public class VueMenuActivity extends Activity {
 	protected void onPause() {
 		super.onPause();
 	}
+	
+	
+	
+	
+	
+	
 }
 

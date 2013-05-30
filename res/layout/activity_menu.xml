@@ -1,15 +1,26 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout 
+    
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/val"
+
     tools:context=".VueMenuActivity" >
 
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/menu" 
+        android:contentDescription="menu"/>
+    
     <LinearLayout
+        
         android:id="@+id/linearLayout1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:weightSum="100">
+        
+        android:weightSum="100" >
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -17,73 +28,66 @@
             android:layout_weight="20"
             android:orientation="vertical" >
 
-   
+            <Button
+                android:id="@+id/btnQrCode"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="8"
+            android:background="@android:color/transparent"
+            />
 
             <Button
                 android:id="@+id/buttonGche"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight=".2"
-                android:background="@android:color/transparent"
+                android:layout_weight="2"
                 android:text="@string/bgche"
+                
+            android:background="@android:color/transparent"
                 android:textColor="#F6E2E2"
                 android:typeface="serif" />
-                   
-            
-            <Button
-                android:id="@+id/btnQrCode"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight=".8"
-                android:text="QR CODE" />
-
         </LinearLayout>
-
 
         <Button
             android:id="@+id/buttonMilieu"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="60"
-            android:typeface="serif"
+            android:background="@android:color/transparent"
             android:textColor="#F6E2E2"
-            android:background="@android:color/transparent" />
-            
-<!--             android:text="@string/bmilieu"  -->
-      <LinearLayout
+            android:typeface="serif" />
+
+        <!-- android:text="@string/bmilieu" -->
+
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="20"
             android:orientation="vertical" >
-            
-          <Button
-            android:id="@+id/buttonDrt"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight=".2"
-            android:typeface="serif"
-            android:textColor="#F6E2E2"
-            android:background="@android:color/transparent"
-            android:text="@string/bdroit" />
-                      <Button
+
+            <Button
                 android:id="@+id/btnInfo"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight=".8"
-                android:text="INFO" />
-            
-            </LinearLayout>
-        
-        
-<!--         <ImageButton -->
-<!--         android:id="@+id/buttonDrt" -->
-<!--         android:layout_width="wrap_content" -->
-<!--         android:layout_height="match_parent" -->
-<!--         android:src="@drawable/buttonLeft" -->
-<!--         android:background="@android:color/transparent" -->
-<!--         android:text="@string/bdroit"  -->
-<!--         android:layout_weight="20"/> -->
- 
+                
+            android:background="@android:color/transparent"
+                android:layout_weight="8"
+                />
+
+            <Button
+                android:id="@+id/buttonDrt"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:text="@string/bdroit"
+                android:textColor="#F6E2E2"
+                
+            android:background="@android:color/transparent"
+                android:typeface="serif" />
+        </LinearLayout>
+
+    
+
     </LinearLayout>
 
 </RelativeLayout>
