@@ -17,6 +17,7 @@ public final class R {
         public static final int fuchsia=0x7f040002;
         public static final int gray=0x7f040005;
         public static final int green=0x7f04000c;
+        public static final int grisSombre1=0x7f040010;
         public static final int lime=0x7f04000a;
         public static final int maroon=0x7f040008;
         public static final int navy=0x7f04000e;
@@ -37,34 +38,44 @@ public final class R {
          */
         public static final int activity_horizontal_margin=0x7f050000;
         public static final int activity_vertical_margin=0x7f050001;
+        public static final int tailleTexteTitre=0x7f050002;
     }
     public static final class drawable {
         public static final int ic_launcher=0x7f020000;
-        public static final int menu=0x7f020001;
-        public static final int val=0x7f020002;
+        public static final int icone_news=0x7f020001;
+        public static final int menu=0x7f020002;
+        public static final int mycase=0x7f020003;
+        public static final int val=0x7f020004;
     }
     public static final class id {
-        public static final int action_settings=0x7f090009;
-        public static final int btnInfo=0x7f090005;
-        public static final int btnQrCode=0x7f090002;
-        public static final int button1=0x7f090007;
-        public static final int buttonDrt=0x7f090006;
-        public static final int buttonGche=0x7f090003;
-        public static final int buttonMilieu=0x7f090004;
+        public static final int action_settings=0x7f09000f;
+        public static final int btnInfo=0x7f090006;
+        public static final int btnQrCode=0x7f090003;
+        public static final int button1=0x7f090008;
+        public static final int buttonDrt=0x7f090007;
+        public static final int buttonGche=0x7f090004;
+        public static final int buttonMilieu=0x7f090005;
+        public static final int id_actuView_listeView=0x7f09000d;
+        public static final int id_actuView_texteAccueil=0x7f09000c;
+        public static final int id_listeCell_description=0x7f09000a;
+        public static final int id_listeCell_image=0x7f09000b;
+        public static final int id_listeCell_titre=0x7f090009;
+        public static final int id_titre=0x7f090001;
         public static final int imageView1=0x7f090000;
-        public static final int linearLayout1=0x7f090001;
-        public static final int var_blyt_info=0x7f090008;
+        public static final int linearLayout1=0x7f090002;
+        public static final int var_blyt_info=0x7f09000e;
     }
     public static final class layout {
         public static final int activity_menu=0x7f030000;
         public static final int cartepoi_va=0x7f030001;
-        public static final int liste_actualites=0x7f030002;
-        public static final int vue_choix_poi=0x7f030003;
-        public static final int vue_detaillee_actualite=0x7f030004;
-        public static final int vue_detaillee_bonplan=0x7f030005;
-        public static final int vue_detaillee_poiparticulier=0x7f030006;
-        public static final int vue_info=0x7f030007;
-        public static final int vue_realite_augmentee=0x7f030008;
+        public static final int layout_liste_cell=0x7f030002;
+        public static final int liste_actualites=0x7f030003;
+        public static final int vue_choix_poi=0x7f030004;
+        public static final int vue_detaillee_actualite=0x7f030005;
+        public static final int vue_detaillee_bonplan=0x7f030006;
+        public static final int vue_detaillee_poiparticulier=0x7f030007;
+        public static final int vue_info=0x7f030008;
+        public static final int vue_realite_augmentee=0x7f030009;
     }
     public static final class menu {
         public static final int menu=0x7f080000;

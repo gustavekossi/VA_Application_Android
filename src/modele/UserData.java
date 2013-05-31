@@ -14,7 +14,10 @@ public class UserData {
 		var_Array_Poi = new Vector<Poi>();
 		var_Array_Actu = new Vector<Actualite>();
 		var_Array_BonPlan = new Vector<BonPlan>();
+		
 		generateContentPoi();
+		generateContentActu();
+		generateContentBonPlan();
 	}	
 
 	public static UserData shared_instance() {
@@ -23,6 +26,7 @@ public class UserData {
 		}
 		return var_instance;
 	}
+	
 	public void generateContentPoi(){
 		var_Array_Poi.add(new Poi("musée de Valenciennes", "crée en 1933", "1er musée du nord", 88, 44, 2, 15, 6));
 		var_Array_Poi.add(new Poi("piscine", "centre ville", "piscine VA", 75, 33,8, 95, 4));
@@ -32,6 +36,12 @@ public class UserData {
 	}
 	public void generateContentActu(){
 		var_Array_Actu.add(new Actualite("concert trio", "place de la gare", 42, 4));
+		var_Array_Actu.add(new Actualite("concert trio2", "place de la gare", 42, 4));
+		var_Array_Actu.add(new Actualite("concert trio3", "place de la gare", 42, 4));
+		var_Array_Actu.add(new Actualite("concert trio4", "place de la gare", 42, 4));
+		var_Array_Actu.add(new Actualite("concert trio5", "place de la gare", 42, 4));
+		var_Array_Actu.add(new Actualite("concert trio6", "place de la gare", 42, 4));
+		var_Array_Actu.add(new Actualite("concert trio7", "place de la gare", 42, 4));
 		
 	}
 	public void generateContentBonPlan(){

@@ -13,6 +13,20 @@
         android:layout_height="match_parent"
         android:src="@drawable/menu" 
         android:contentDescription="menu"/>
+
+    <TextView
+        android:id="@+id/id_titre"
+        android:layout_width="wrap_content"
+        android:layout_height="120dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:gravity="center"
+        android:text=""
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/grisSombre1"
+        android:textSize="@dimen/tailleTexteTitre"
+        android:textStyle="bold" />
     
     <LinearLayout
         
@@ -41,13 +55,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="2"
-                android:text="@string/bgche"
+                android:text=""
                 
             android:background="@android:color/transparent"
                 android:textColor="#F6E2E2"
                 android:typeface="serif" />
         </LinearLayout>
 
+        
         <Button
             android:id="@+id/buttonMilieu"
             android:layout_width="wrap_content"
@@ -79,7 +94,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="2"
-                android:text="@string/bdroit"
+                android:text=""
                 android:textColor="#F6E2E2"
                 
             android:background="@android:color/transparent"

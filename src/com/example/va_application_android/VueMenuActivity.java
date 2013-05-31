@@ -8,6 +8,7 @@ import android.view.View.OnClickListener;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.va_application_android.R;
@@ -16,10 +17,14 @@ import android.os.Bundle;
 
 
 public class VueMenuActivity extends Activity {
-     int compteur;
+    
+	
+	int compteur;
 	Button btnGche,btnMilieu,btnDrt,var_bt_Info;
-//   menu à l'écran
-	String[] tab_menu ={"Explorer","Bon Plan","A proximité","Actualités"};
+	TextView var_textViewTitre ;
+	
+	//   menu à l'écran
+	String[] tab_menu ={"Explorer","Bon Plan","A proximitŽ","ActualitŽs"};
 	
 	
 	@Override
@@ -36,9 +41,12 @@ public class VueMenuActivity extends Activity {
 		btnMilieu =(Button)findViewById(R.id.buttonMilieu);
 		btnDrt =(Button)findViewById(R.id.buttonDrt);
 		var_bt_Info = (Button)findViewById(R.id.btnInfo);
-				
-		btnMilieu.setText(""+tab_menu[0]);
-
+		
+		var_textViewTitre = (TextView)findViewById(R.id.id_titre);
+		
+		//btnMilieu.setText(""+tab_menu[0]);
+		var_textViewTitre.setText(tab_menu[0]);
+		
 		//      gestion bouton gauche
 		btnGche.setOnClickListener(new OnClickListener() {
 			
@@ -52,7 +60,8 @@ public class VueMenuActivity extends Activity {
 				if(compteur < 0){
 					compteur =tab_menu.length-1;
 				}
-				btnMilieu.setText(tab_menu[compteur]);
+				//btnMilieu.setText(tab_menu[compteur]);
+				var_textViewTitre.setText(tab_menu[compteur]);
 			}
 		});
 		//      gestion bouton milieu
@@ -83,6 +92,7 @@ public class VueMenuActivity extends Activity {
 			}
 		});
 		
+		
 		//      gestion bouton droit
 		btnDrt.setOnClickListener(new OnClickListener() {
 			@Override
@@ -92,7 +102,8 @@ public class VueMenuActivity extends Activity {
 				if(compteur >= 4){
 					compteur = 0;
 				}
-				btnMilieu.setText(""+tab_menu[compteur]);
+				//btnMilieu.setText(""+tab_menu[compteur]);
+				var_textViewTitre.setText(tab_menu[compteur]);
 			}
 		});
 		
