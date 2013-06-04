@@ -1,6 +1,8 @@
 package com.example.va_application_android;
 
+import modele.UpdateSqlite;
 import android.content.Intent;
+import android.text.style.UpdateLayout;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
@@ -34,6 +36,8 @@ public class VueMenuActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);	
 		
+		UpdateSqlite.shared_instance().Update();	
+	
 		setContentView(R.layout.activity_menu);
 		
 		compteur = 0;
@@ -45,7 +49,6 @@ public class VueMenuActivity extends Activity {
 		
 		var_textViewTitre = (TextView)findViewById(R.id.id_titre);
 		
-		//btnMilieu.setText(""+tab_menu[0]);
 		var_textViewTitre.setText(tab_menu[0]);
 		
 		//      gestion bouton gauche
