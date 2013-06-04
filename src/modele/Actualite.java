@@ -44,6 +44,4 @@ public class Actualite {
 	public void setVar_id_poi(int var_id_poi) {
 		this.var_id_poi = var_id_poi;
 	}
-	
-	
 }

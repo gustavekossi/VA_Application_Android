@@ -28,11 +28,11 @@ public class UserData {
 	}
 	
 	public void generateContentPoi(){
-		var_Array_Poi.add(new Poi("musée de Valenciennes", "crée en 1933", "1er musée du nord", 88, 44, 2, 15, 6));
-		var_Array_Poi.add(new Poi("piscine", "centre ville", "piscine VA", 75, 33,8, 95, 4));
-		var_Array_Poi.add(new Poi("bistro de VA", "rue du compte", "pourri", 78, 48,24, 65, 9));
-		var_Array_Poi.add(new Poi("gare", "ancienne gare", "abime", 18, 34,3, 85, 7));
-		var_Array_Poi.add(new Poi("saint james", "excentré", "boite", 47, 37,6, 55, 8));
+		var_Array_Poi.add(new Poi("musée de Valenciennes", "crée en 1933", "1er musée du nord", 88, 44, 2, 15, 0));
+		var_Array_Poi.add(new Poi("piscine", "centre ville", "piscine VA", 75, 33,8, 95, 0));
+		var_Array_Poi.add(new Poi("bistro de VA", "rue du compte", "pourri", 78, 48,24, 65, 1));
+		var_Array_Poi.add(new Poi("gare", "ancienne gare", "abime", 18, 34,3, 85, 1));
+		var_Array_Poi.add(new Poi("saint james", "excentré", "boite", 47, 37,6, 55, 2));
 	}
 	public void generateContentActu(){
 		var_Array_Actu.add(new Actualite("concert trio", "place de la gare", 42, 4));

@@ -5,7 +5,7 @@ import android.provider.MediaStore.Images;
 public class Poi {
 
 	private String var_name;
-	private String var_desc;
+	private String var_description;
 	private String var_resume;
 	private float var_longitude;
 	private float var_latitude;
@@ -13,9 +13,10 @@ public class Poi {
 	private int var_image;
 	private int var_type;
 
-	public Poi(String var_n, String var_d, String var_r,float var_long,float var_lat,int var_id,int var_img,int var_typ) {
+	public Poi(String var_n, String var_d, String var_r,float var_long,
+			float var_lat,int var_id,int var_img,int var_typ) {
 	    this.var_name = var_n;
-	    this.var_desc = var_d;
+	    this.var_description = var_d;
 	    this.var_resume = var_r;
 	    this.var_longitude = var_long;
 	    this.var_latitude = var_lat;
@@ -33,11 +34,11 @@ public class Poi {
 	}
 
 	public String getVar_desc() {
-		return var_desc;
+		return var_description;
 	}
 
 	public void setVar_desc(String var_desc) {
-		this.var_desc = var_desc;
+		this.var_description = var_desc;
 	}
 
 	public String getVar_resume() {

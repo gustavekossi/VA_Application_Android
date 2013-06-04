@@ -12,19 +12,22 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.va_application_android.R;
+import com.google.zxing.client.android.CaptureActivity;
+import com.keyneosoft.integrationzxing.MainActivity;
+
 import android.app.Activity;
 import android.os.Bundle;
 
 
 public class VueMenuActivity extends Activity {
     
-	
 	int compteur;
-	Button btnGche,btnMilieu,btnDrt,var_bt_Info;
+	Button btnGche,btnMilieu,btnDrt,var_bt_Info,var_bt_qrcode;
 	TextView var_textViewTitre ;
+	private TextView scanResult = null;
 	
 	//   menu à l'écran
-	String[] tab_menu ={"Explorer","Bon Plan","A proximitŽ","ActualitŽs"};
+	String[] tab_menu ={"Explorer","Bon Plan","A proximité","Actualités"};
 	
 	
 	@Override
@@ -33,14 +36,12 @@ public class VueMenuActivity extends Activity {
 		
 		setContentView(R.layout.activity_menu);
 		
-		
-		
-		
 		compteur = 0;
 		btnGche =(Button)findViewById(R.id.buttonGche);
 		btnMilieu =(Button)findViewById(R.id.buttonMilieu);
 		btnDrt =(Button)findViewById(R.id.buttonDrt);
 		var_bt_Info = (Button)findViewById(R.id.btnInfo);
+		var_bt_qrcode = (Button)findViewById(R.id.btnQrCode);
 		
 		var_textViewTitre = (TextView)findViewById(R.id.id_titre);
 		
@@ -72,7 +73,7 @@ public class VueMenuActivity extends Activity {
 				Intent var_prochainePage;
 				
 				if(compteur == 0){
-					var_prochainePage = new Intent("com.example.va_application_android.VUECARTEPOI");
+					var_prochainePage = new Intent("com.example.va_application_android.VUELISTEPOI");
 						Toast.makeText(VueMenuActivity.this,
 								"Button Explorer cliqué!", Toast.LENGTH_SHORT).show();
 					startActivity(var_prochainePage);
@@ -117,19 +118,36 @@ public class VueMenuActivity extends Activity {
 				startActivity(var_prochainePage);
 			}
 		});
-		
+//      gestion bouton qr code	
+		var_bt_qrcode.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				 
+//				Intent	var_prochainePage = new Intent("com.example.va_application_android.CAPTUREACTIVITY");
+				Intent	var_prochainePage = new Intent(VueMenuActivity.this, CaptureActivity.class);
+				var_prochainePage.putExtra("SCAN_MODE", "QR_CODE_MODE");
+				startActivityForResult(var_prochainePage,0);
+//				startActivity(var_prochainePage);
+			}
+		});
+//		scanResult = (TextView)this.findViewById(R.id.scanResult);
 	}
 	
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+		super.onActivityResult(requestCode, resultCode, data);
+//		if (requestCode == 0) {
+			// récupération du QR-Code
+			
+//			scanResult.setText(""+data.getExtras().getString("codeBarre"));
 
+//		}
+	}
+	
 	@Override
 	protected void onPause() {
 		super.onPause();
 	}
-	
-	
-	
-	
-	
-	
 }
 
