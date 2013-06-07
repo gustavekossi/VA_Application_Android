@@ -10,5 +10,26 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="vue detaillée poi particulier" />
+    
+     <TextView
+         android:id="@+id/textName"
+         android:layout_width="60dp"
+         android:layout_height="wrap_content"
+         android:layout_weight="0.10"
+         android:text="Name" />
+
+    <TextView
+        android:id="@+id/textDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Description"
+        android:layout_weight=".1" />
+
+    <TextView
+        android:id="@+id/textResume"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Résumé"
+        android:layout_weight=".1" />
 
 </LinearLayout>

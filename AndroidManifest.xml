@@ -7,7 +7,11 @@
     <uses-sdk
         android:minSdkVersion="8"
         android:targetSdkVersion="17" />
+    
         <uses-permission android:name="android.permission.CAMERA" />
+       <uses-permission android:name="android.permission.INTERNET" /> 
+		<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+		<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
         android:allowBackup="true"
@@ -102,18 +106,30 @@
             </intent-filter>
         </activity>
          
+        <activity
+            android:name="com.example.va_application_android.VueDetailleePOI"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape" 
+             android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" >
+            <intent-filter>
+                <action android:name="com.example.va_application_android.VUEDETAILLEEPOI" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
         
-<!--         appel du qr code -->
-<!--         <activity -->
-<!--             android:name="com.google.zxing.client.android.CaptureActivity" -->
-<!--             android:label="@string/app_name" -->
-<!--             android:screenOrientation="landscape"  -->
-<!--              android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" > -->
-<!--             <intent-filter> -->
-<!--                 <action android:name="com.google.zxing.client.android.CAPTUREACTIVITY" /> -->
-<!--                 <category android:name="android.intent.category.DEFAULT" /> -->
-<!--             </intent-filter> -->
-<!--         </activity> -->
+
+        <activity
+            android:name="com.example.va_application_android.VueRealiteAugmentee"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape" 
+             android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" >
+            <intent-filter>
+                <action android:name="com.example.va_application_android.VUEREALITEAUGMENTEE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        
         <activity
             android:name="com.google.zxing.client.android.CaptureActivity"
             android:screenOrientation="landscape" 

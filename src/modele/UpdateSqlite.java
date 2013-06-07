@@ -1,16 +1,20 @@
 package modele;
 
 import java.io.BufferedInputStream;
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.net.URL;
 import java.net.URLConnection;
+import java.util.Scanner;
 import java.util.Vector;
 
 import android.os.AsyncTask;
 import android.os.Environment;
+import android.util.Log;
 
 public class UpdateSqlite{
 
@@ -39,9 +43,9 @@ public class UpdateSqlite{
 	public void Update(){
 		
 		
+
+		new UpdateSqliteManager().execute(null, null, null);
 		
-		DownloadFile downloadFile = new DownloadFile();
-		downloadFile.execute("http://88.191.145.50/ProjetMaster/mobile/bdd/1370264885.sqlite");
 		
 		
 	}
@@ -52,65 +56,105 @@ public class UpdateSqlite{
 
 
 
-class DownloadFile extends AsyncTask<String, Integer, String> {
-   
+
+
+
+
+
 	
-	@Override
-    protected String doInBackground(String... sUrl) {
-        try {
-        	
-        	URL url = new URL(sUrl[0]);
-            URLConnection connection = url.openConnection();
-            connection.connect();
-            // this will be useful so that you can show a typical 0-100% progress bar
-            int fileLength = connection.getContentLength();
-
-            // download the file
-            InputStream input = new BufferedInputStream(url.openStream());
-             
-                    
-           OutputStream output = new FileOutputStream(Environment.getRootDirectory()+"/archive.sqlite");
-
-           System.out.print("seve on  "+Environment.getRootDirectory()+"/archive.sqlite");
-           
-           
-            byte data[] = new byte[1024];
-            long total = 0;
-            int count;
-            while ((count = input.read(data)) != -1) {
-                total += count;
-                // publishing the progress....
-                //publishProgress((int) (total * 100 / fileLength));
-                output.write(data, 0, count);
-            }
-
-            output.flush();
-            output.close();
-            input.close();
-        } catch (Exception e) {
-        }
-        return null;
-    }
-    
-    
-    @Override
-    protected void onPreExecute() {
-      
-    	super.onPreExecute();
-        
-    	System.out.print("save terminé");
-    }
-
-    @Override
-    protected void onProgressUpdate(Integer... progress) {
-        super.onProgressUpdate(progress);
+		
+       
         
 
-    }
+
+
+
+
+
+class UpdateSqliteManager extends AsyncTask<Void, Integer, Void> {
+  
+	protected Void doInBackground(Void... arg0) {
+		
+		
+        
+		try {
+			
+			
+			String theFisrtURL = "http://88.191.145.50/ProjetMaster/mobile/version.php";
+
+			
+			URL url = new URL(theFisrtURL);
+	        InputStream input = url.openConnection().getInputStream();
+	      
+	        String resultat = this.convertStreamToString(input);
+	        
+	        //resultat.replaceAll("[\\t\\r\\n]", "");
+
+	        Scanner sc = new Scanner(resultat);
+	        int valeur = sc.nextInt();
+	        
+			//int valeur = Integer.parseInt(resultat);
+	      	
+			
+			String stringSqliteURL = "http://88.191.145.50/ProjetMaster/mobile/bdd/"+valeur+".sqlite";
+
+			
+			URL sqliteURL = new URL(stringSqliteURL);
+	        
+			Log.d("DEBUT", "url = "+sqliteURL);
+			
+	      	
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+		
+		
+		return null;
+	
+   }
+
+	
+
+
+   protected void onProgressUpdate(Integer... progress) {
     
-    
+   	
+
+   }
+
+   protected void onPostExecute(Void result) {
+     
+   	
+   
+   }
+   
+   
+   
+   
+   
+   public String convertStreamToString(InputStream is) throws Exception {
+	    
+		BufferedReader reader = new BufferedReader(new InputStreamReader(is, "UTF-8"));
+		
+		StringBuilder sb = new StringBuilder();
+	    String line = null;
+	    
+	    while ((line = reader.readLine()) != null) {
+	      sb.append(line + "\n");
+	    }
+	    is.close();
+	    
+	    
+	    return sb.toString();
+	}
+   
+ 
+   
 }
-    
+
     
 
 

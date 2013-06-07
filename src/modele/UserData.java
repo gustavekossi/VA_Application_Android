@@ -11,6 +11,8 @@ public class UserData {
 	private static UserData var_instance = null;
 	
 	public UserData() {
+		
+		super();
 		var_Array_Poi = new Vector<Poi>();
 		var_Array_Actu = new Vector<Actualite>();
 		var_Array_BonPlan = new Vector<BonPlan>();
@@ -18,6 +20,9 @@ public class UserData {
 		generateContentPoi();
 		generateContentActu();
 		generateContentBonPlan();
+		
+		
+ 	
 	}	
 
 	public static UserData shared_instance() {
@@ -28,11 +33,21 @@ public class UserData {
 	}
 	
 	public void generateContentPoi(){
+		
+		
+		
 		var_Array_Poi.add(new Poi("musée de Valenciennes", "crée en 1933", "1er musée du nord", 88, 44, 2, 15, 0));
-		var_Array_Poi.add(new Poi("piscine", "centre ville", "piscine VA", 75, 33,8, 95, 0));
 		var_Array_Poi.add(new Poi("bistro de VA", "rue du compte", "pourri", 78, 48,24, 65, 1));
 		var_Array_Poi.add(new Poi("gare", "ancienne gare", "abime", 18, 34,3, 85, 1));
 		var_Array_Poi.add(new Poi("saint james", "excentré", "boite", 47, 37,6, 55, 2));
+		
+		var_Array_Poi.add(new Poi("mairie valenciennes", "---", "----", 47, 37,7, 55, 2));
+		var_Array_Poi.add(new Poi("MacDo Tertiale", "---", "----", 47, 37,8, 55, 2));
+		var_Array_Poi.add(new Poi("Le phenix", "---", "----", 47, 37,9, 55, 2));
+		var_Array_Poi.add(new Poi("theatre De Denain", "---", "----", 47, 37,10, 55, 2));
+		
+		
+		
 	}
 	public void generateContentActu(){
 		var_Array_Actu.add(new Actualite("concert trio", "place de la gare", 42, 4));
@@ -52,5 +67,26 @@ public class UserData {
 		var_Array_BonPlan.add(new BonPlan("4reduction h&m", "le mercredi 20 mai", 7, 9));
 		var_Array_BonPlan.add(new BonPlan("5reduction h&m", "le mercredi 20 mai", 7, 9));
 		var_Array_BonPlan.add(new BonPlan("6reduction h&m", "le mercredi 20 mai", 7, 9));
+	}
+	
+	public Poi getPoiFromIdent(int _ident){
+		
+		
+		
+		 int var_nbPoi = this.var_Array_Poi.size() ;
+	        
+	       for( int i = 0 ; i < var_nbPoi ; i++ ){
+	    	   
+	    	   if(this.var_Array_Poi.elementAt(i).getVar_ident() == _ident){
+	    		   
+	    		   return this.var_Array_Poi.elementAt(i) ;
+	    		   
+	    	   }
+	    	   
+	       }
+	       
+	     return null ;
+	        
+		
 	}
 }

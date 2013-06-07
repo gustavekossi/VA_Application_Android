@@ -15,6 +15,20 @@
         android:contentDescription="menu"/>
 
     <TextView
+        android:id="@+id/menu_texte_temperature"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:text="Temperature --°C  Humidité --%"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
         android:id="@+id/id_titre"
         android:layout_width="wrap_content"
         android:layout_height="100dp"

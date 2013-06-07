@@ -15,14 +15,15 @@ public class Poi {
 
 	public Poi(String var_n, String var_d, String var_r,float var_long,
 			float var_lat,int var_id,int var_img,int var_typ) {
-	    this.var_name = var_n;
-	    this.var_description = var_d;
-	    this.var_resume = var_r;
-	    this.var_longitude = var_long;
-	    this.var_latitude = var_lat;
-	    this.var_ident = var_id;
-	    this.var_image = var_img;
-	    this.var_type = var_typ;
+		
+	    this.var_name = new String(var_n)	;
+	    this.var_description = new String(var_d)	;
+	    this.var_resume = new String(var_r)	;
+	    this.var_longitude = var_long	;
+	    this.var_latitude = var_lat	;
+	    this.var_ident = var_id		;
+	    this.var_image = var_img	;
+	    this.var_type = var_typ		;
 	}
 
 	public String getVar_name() {
